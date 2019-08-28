@@ -5,3 +5,4 @@ bin/
 gui_src/Makefile
 lib/libcyusb.so
 lib/libcyusb.so.1
+build/

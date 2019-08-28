@@ -4,8 +4,8 @@
  *                        or SPI Flash.
  */
 
-#include <QtCore>
-#include <QtGui>
+#include <QProgressBar>
+#include <QStatusBar>
 
 #include <stdio.h>
 #include <unistd.h>
@@ -18,7 +18,7 @@
 #include <libusb-1.0/libusb.h>
 
 #include "../include/cyusb.h"
-#include "../include/controlcenter.h"
+#include "controlcenter.h"
 
 extern ControlCenter *mainwin;
 extern QStatusBar *sb;

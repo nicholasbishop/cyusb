@@ -1,10 +1,7 @@
-#include <QtCore>
-#include <QtGui>
-
 #include <sys/types.h>
 #include <sys/socket.h>
 
-#include "../include/controlcenter.h"
+#include "controlcenter.h"
 
 int sigusr1_fd[2];
 

@@ -3,9 +3,6 @@
  * Description          : Provides functions to test USB data transfer performance.
  */
 
-#include <QtCore>
-#include <QtGui>
-
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -19,7 +16,7 @@
 #include <libusb-1.0/libusb.h>
 
 #include "../include/cyusb.h"
-#include "../include/controlcenter.h"
+#include "controlcenter.h"
 
 extern ControlCenter *mainwin;
 extern cyusb_handle  *h;

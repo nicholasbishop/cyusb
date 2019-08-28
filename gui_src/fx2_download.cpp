@@ -1,5 +1,6 @@
-#include <QtCore>
-#include <QtGui>
+#include <QMainWindow>
+#include <QProgressBar>
+#include <QStatusBar>
 
 #include <stdio.h>
 #include <unistd.h>
@@ -13,7 +14,7 @@
 #include <libusb-1.0/libusb.h>
 
 #include "../include/cyusb.h"
-#include "../include/controlcenter.h"
+#include "controlcenter.h"
 
 static char fx2_vendax[][256] = {
 	":0a0d3e0000010202030304040505",
