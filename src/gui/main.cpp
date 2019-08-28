@@ -2155,10 +2155,10 @@ int main(int argc, char **argv)
 	mainwin = new ControlCenter;
 	QMainWindow *mw = new QMainWindow(0);
 	mw->setCentralWidget(mainwin);
+    mw->resize(1024, 768);
 	QIcon *qic = new QIcon("cypress.png");
 	app.setWindowIcon(*qic);
 	set_tool_tips();
-	mw->setFixedSize(880, 660);
 
 	update_devlist();
 
