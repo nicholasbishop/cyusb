@@ -29,25 +29,18 @@ cp configs/cyusb.conf /etc/
 cp configs/88-cyusb.rules /etc/udev/rules.d/
 make
 
-# Remove stale versions of the libcyusb library
-rm -f /usr/lib/libcyusb.so* /usr/local/lib/libcyusb.so*
-
 # Copy the libcyusb library into the system library folders.
-cp lib/libcyusb.so.1 /usr/local/lib
-ln -s /usr/local/lib/libcyusb.so.1 /usr/local/lib/libcyusb.so
+cp lib/libcyusb.so.1 /usr/lib
+ln -s /usr/lib/libcyusb.so.1 /usr/lib/libcyusb.so
 
-cp $CURDIR/configs/cy_renumerate.sh /usr/local/bin
-chmod 777 /usr/local/bin/cy_renumerate.sh
+cp $CURDIR/configs/cy_renumerate.sh /usr/bin
+chmod 777 /usr/bin/cy_renumerate.sh
 
-# Set the CYUSB_ROOT variable to point to the current directory.
-echo "" >> /etc/profile
-echo "# Cypress USB Suite: Root directory" >> /etc/profile
-echo "export CYUSB_ROOT=$CURDIR" >> /etc/profile
-echo "" >> /etc/profile
+# # Set the CYUSB_ROOT variable to point to the current directory.
+# echo "" >> /etc/profile
+# echo "# Cypress USB Suite: Root directory" >> /etc/profile
+# echo "export CYUSB_ROOT=$CURDIR" >> /etc/profile
+# echo "" >> /etc/profile
 
-# Compile and install the cyusb_linux application.
-cd $CURDIR/gui_src/
-qmake-qt4 
-make clean
-make
-cp $CURDIR/bin/cyusb_linux /usr/local/bin
+# Install the cyusb_linux application.
+cp $CURDIR/bin/cyusb_linux /usr/bin

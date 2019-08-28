@@ -20,6 +20,12 @@ of the GNU LGPL 2.1.
 
     For example, if the archive is extracted to /home/user/cyusb_linux_1.0.5; then
     e.g.: user@desktop:/home/user/cyusb_linux_1.0.5 $ make
+    
+ 2. Build the GUI:
+
+        cd gui_src
+        qmake-qt4
+        make -j
 
  2. Make sure that the install.sh script is executable by changing the mode
     of install.sh file.
