@@ -27,12 +27,8 @@ of the GNU LGPL 2.1.
         qmake-qt4
         make -j
 
- 2. Make sure that the install.sh script is executable by changing the mode
-    of install.sh file.
-    e.g.: user@desktop:/home/user/cyusb_linux_1.0.5 $ chmod +x install.sh
-
  3. The install.sh script compiles the cyusb_linux GUI application, and installs
-    the libcyusb library and the application in the system directories (/usr/local/).
+    the libcyusb library and the application in the system directories (/usr by default).
     It also sets up a set of UDEV rules and updates the environment variables under
     the /etc directory.
 
