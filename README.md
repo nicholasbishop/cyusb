@@ -9,32 +9,21 @@ of the GNU LGPL 2.1.
     library.
  2. Native gcc/g++ tool-chain and the GNU make utility are required for
     compiling the library and application.
- 2. qt4 is required for building the cyusb_linux GUI application.
+ 2. qt5 is required for building the cyusb_linux GUI application.
  3. The pidof command is used by the cyusb_linux application to handle
     hot-plug of USB devices.
-
-## Installation Steps
-
- 1. cd to the main directory where files where extracted and execute 'make'.
-    This will compile the libcyusb library and create a static library.
-
-    For example, if the archive is extracted to /home/user/cyusb_linux_1.0.5; then
-    e.g.: user@desktop:/home/user/cyusb_linux_1.0.5 $ make
     
- 2. Build the GUI:
+## udev rules
 
-        cd gui_src
-        qmake-qt4
-        make -j
+To install udev rules:
 
- 3. The install.sh script compiles the cyusb_linux GUI application, and installs
-    the libcyusb library and the application in the system directories (/usr by default).
-    It also sets up a set of UDEV rules and updates the environment variables under
-    the /etc directory.
+    sudo ./install_udev_rules.sh
 
-    As these changes require root (super user) permissions, the install.sh script
-    needs to be executed from a root login.
+## Build and run
 
-    e.g.: root@desktop:/home/user/cyusb_linux_1.0.5 $ ./install.sh
-
- 4. The GUI application can now be launched using the 'cyusb_linux' command.
+    mkdir build
+    cd build
+    cmake -G Ninja ..
+    ninja
+    
+    ./cyusb
