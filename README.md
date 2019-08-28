@@ -1,7 +1,8 @@
 # CyUSB Suite For Linux
 
-Cypress Semiconductor Corporation
-CyUSB Suite For Linux, version 1.0.5
+This repo is based on CyUSB Suite For Linux, version 1.0.5, created by
+Cypress Semiconductor Corporation, which is released under the terms
+of the GNU LGPL 2.1.
 
 ## Pre-requisites
  1. libusb-1.0.x is required for compilation and functioning of the API
