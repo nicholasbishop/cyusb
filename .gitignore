@@ -1,3 +1,7 @@
 *.o
 moc_*
 ui_controlcenter.h
+bin/
+gui_src/Makefile
+lib/libcyusb.so
+lib/libcyusb.so.1
