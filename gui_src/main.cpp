@@ -1860,7 +1860,7 @@ static void in_callback( struct libusb_transfer *transfer)
 	printf("Callback function called\n");
 
 	if ( transfer->status != LIBUSB_TRANSFER_COMPLETED ) {
-		libusb_error(transfer->status, "Transfer not completed normally");
+		libusb_error(reinterpret_cast<int* (*)()>(transfer->status), "Transfer not completed normally");
 	}
 
 	totalin = pkts_success = pkts_failure = 0;
@@ -1913,7 +1913,7 @@ static void out_callback( struct libusb_transfer *transfer)
 	printf("Callback function called\n");
 
 	if ( transfer->status != LIBUSB_TRANSFER_COMPLETED ) {
-		libusb_error(transfer->status, "Transfer not completed normally");
+		libusb_error(reinterpret_cast<int* (*)()>(transfer->status), "Transfer not completed normally");
 	}
 
 	totalout = pkts_success = pkts_failure = 0;
