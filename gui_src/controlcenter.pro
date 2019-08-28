@@ -1,3 +1,4 @@
+QMAKE_CXXFLAGS += -fpermissive
 TEMPLATE	= app
 HEADERS		= ../include/controlcenter.h
 FORMS		= controlcenter.ui
