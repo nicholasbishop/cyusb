@@ -15,7 +15,7 @@
 
 #include <libusb-1.0/libusb.h>
 
-#include "../include/cyusb.h"
+#include "cyusb.h"
 #include "controlcenter.h"
 
 extern ControlCenter *mainwin;

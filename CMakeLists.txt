@@ -4,17 +4,17 @@ project(cyusb)
 
 find_package(Qt5 COMPONENTS Network Widgets REQUIRED)
 
-include_directories(gui_src)
+add_library(cyusb src/libcyusb.cpp)
 
-add_library(cyusb lib/libcyusb.cpp)
+include_directories(src)
 
 add_executable(cyusb-bin
-  gui_src/controlcenter.cpp
-  gui_src/controlcenter.ui
-  gui_src/fx2_download.cpp
-  gui_src/fx3_download.cpp
-  gui_src/main.cpp
-  gui_src/streamer.cpp
+  src/gui/controlcenter.cpp
+  src/gui/controlcenter.ui
+  src/gui/fx2_download.cpp
+  src/gui/fx3_download.cpp
+  src/gui/main.cpp
+  src/gui/streamer.cpp
 )
 
 set_target_properties(cyusb-bin PROPERTIES AUTOMOC ON AUTOUIC ON)

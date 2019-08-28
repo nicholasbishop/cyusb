@@ -18,7 +18,7 @@
 #include <fcntl.h>
 
 #include <libusb-1.0/libusb.h>
-#include "../include/cyusb.h"
+#include "cyusb.h"
 
 /* Maximum length of a string read from the Configuration file (/etc/cyusb.conf) for the library. */
 #define MAX_CFG_LINE_LENGTH                     (120)

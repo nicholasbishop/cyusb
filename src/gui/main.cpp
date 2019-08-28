@@ -31,7 +31,7 @@
 
 #include "usbmethods.h"
 #include "controlcenter.h"
-#include "../include/cyusb.h"
+#include "cyusb.h"
 
 ControlCenter *mainwin = NULL;
 QProgressBar  *mbar = NULL;
