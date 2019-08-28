@@ -1,9 +1,9 @@
+# CyUSB Suite For Linux
 
-                    Cypress Semiconductor Corporation
-                   CyUSB Suite For Linux, version 1.0.5
-                   ====================================
+Cypress Semiconductor Corporation
+CyUSB Suite For Linux, version 1.0.5
 
-Pre-requisites:
+## Pre-requisites
  1. libusb-1.0.x is required for compilation and functioning of the API
     library.
  2. Native gcc/g++ tool-chain and the GNU make utility are required for
@@ -12,7 +12,7 @@ Pre-requisites:
  3. The pidof command is used by the cyusb_linux application to handle
     hot-plug of USB devices.
 
-Installation Steps:
+## Installation Steps
 
  1. cd to the main directory where files where extracted and execute 'make'.
     This will compile the libcyusb library and create a static library.
@@ -35,5 +35,3 @@ Installation Steps:
     e.g.: root@desktop:/home/user/cyusb_linux_1.0.5 $ ./install.sh
 
  4. The GUI application can now be launched using the 'cyusb_linux' command.
-
-
