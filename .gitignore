@@ -1,1 +1,3 @@
 *.o
+moc_*
+ui_controlcenter.h
