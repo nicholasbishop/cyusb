@@ -15,23 +15,12 @@ LIBDIR="${PREFIX}/lib64"
 echo "Your current directory is $CURDIR. This is where the cyusb_suite software will be installed..."
 A=`whoami`
 
-create_udev_rules() {
-	echo "# Cypress USB driver for FX2 and FX3 (C) Cypress Semiconductor Corporation / ATR-LABS" > configs/88-cyusb.rules
-	echo "# Rules written by V. Radhakrishnan ( rk@atr-labs.com )" >> configs/88-cyusb.rules
-	echo "# Cypress USB vendor ID = 0x04b4" >> configs/88-cyusb.rules
-
-	echo 'KERNEL=="*", SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ACTION=="add", ATTR{idVendor}=="04b4", MODE="666", TAG="cyusb_dev", RUN+="'"/usr/bin/cy_renumerate.sh A"'"' >> configs/88-cyusb.rules
-	echo 'KERNEL=="*", SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ACTION=="remove", TAG=="cyusb_dev", RUN+="'"/usr/bin/cy_renumerate.sh R"'"' >> configs/88-cyusb.rules
-}
-
 if [ $A != 'root' ]; then
    echo "You have to be root to run this script"
    exit 1;
 fi
 
-create_udev_rules
 cp configs/cyusb.conf /etc/
-cp configs/88-cyusb.rules /etc/udev/rules.d/
 
 # Copy the libcyusb library into the system library folders.
 cp lib/libcyusb.so.1 "${LIBDIR}"
