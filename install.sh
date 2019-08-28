@@ -32,7 +32,6 @@ fi
 create_udev_rules
 cp configs/cyusb.conf /etc/
 cp configs/88-cyusb.rules /etc/udev/rules.d/
-make
 
 # Copy the libcyusb library into the system library folders.
 cp lib/libcyusb.so.1 "${LIBDIR}"
