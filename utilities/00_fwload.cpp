@@ -20,7 +20,7 @@
 #include <fcntl.h>
 #include <malloc.h>
 
-#include "../include/cyusb.h"
+#include "cyusb.h"
 
 /********** Cut and paste the following & modify as required  **********/
 static const char * program_name;

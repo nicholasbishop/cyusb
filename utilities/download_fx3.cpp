@@ -12,7 +12,7 @@
 #include <sys/stat.h>
 
 #include <libusb-1.0/libusb.h>
-#include "../include/cyusb.h"
+#include "cyusb.h"
 
 #define FLASHPROG_VID		(0x04b4)	// USB VID for the FX3 flash programmer.
 

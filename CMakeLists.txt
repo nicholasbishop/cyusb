@@ -25,3 +25,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpermissive")
 target_link_libraries(cyusb-bin Qt5::Network Qt5::Widgets cyusb usb-1.0 pthread)
 
 set_target_properties(cyusb-bin PROPERTIES OUTPUT_NAME cyusb)
+
+add_executable(cyusb-fwload utilities/00_fwload.cpp)
+target_link_libraries(cyusb-fwload cyusb usb-1.0)
+
+add_executable(cyusb-download-fx3 utilities/download_fx3.cpp)
+target_link_libraries(cyusb-download-fx3 cyusb usb-1.0)
